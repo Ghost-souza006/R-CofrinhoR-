@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cofre.css">
+    <title>Cofre</title>
+</head>
+<body>
+    <script src="Cofre.js"></script>
+    <h1>Cofrinho digital R$</h1>
+    <div class="cofre-container">
+        <div class="cofre-barra" id="cofreBarra"></div>
+        <img src="img/background-piggy-bank-with-coins-banknotes.png" alt="Cofre" class="cofre-imagem">
+    </div>
+    <div class="button-container">
+        <button onclick="MudarFundo()">Fundo Verde</button>
+        <button onclick="Adicionar(0.10)">Adicionar R$0,10</button>
+        <button onclick="Adicionar(0.25)">Adicionar R$0,25</button>
+        <button onclick="Adicionar(0.50)">Adicionar R$0,50</button>
+        <button onclick="Adicionar(1.00)">Adicionar R$1,00</button>
+        <button onclick="MostrarTotal()">Mostrar Total R$</button>
+        <button onclick="EsvaziarCofre()">Esvaziar Cofre</button>
+        <button onclick="Sacar()">Sacar</button>
+    </div>
+    <p id="total"></p>
+    <p id="moedas">Moedas adicionadas:</p>
+</body>
+</html>

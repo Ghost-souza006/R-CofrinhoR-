@@ -1,0 +1,137 @@
+/* Estilo para os botões */
+button {
+    display: block; /* Faz com que cada botão ocupe uma linha */
+    width: 100px; /* Define uma largura fixa */
+    height: 40px; /* Define uma altura fixa */
+    margin: 10px 0; /* Adiciona espaçamento vertical entre os botões */
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo ao passar o mouse */
+button:hover {
+    background-color: #45a049; /* Verde mais escuro */
+}
+
+/* Ajuste para o botão de fundo rosa */
+button:first-of-type {
+    background-color: #ff69b4; /* Rosa */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 10px 15px; /* Ajusta o tamanho do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de clique */
+    font-size: 14px; /* Ajusta o tamanho do texto */
+}
+
+button:first-of-type:hover {
+    background-color: #ff1493; /* Rosa mais escuro */
+}
+
+/* Ajuste para o botão "Esvaziar Cofre" */
+button:last-of-type {
+    background-color: #ff69b4; /* Rosa */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 10px 15px; /* Ajusta o tamanho do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de clique */
+    font-size: 14px; /* Ajusta o tamanho do texto */
+}
+
+/* Cor ao passar o mouse no botão "Esvaziar Cofre" */
+button:last-of-type:hover {
+    background-color: #ff1493; /* Rosa mais escuro */
+}
+
+/* Centralizar o título e a imagem */
+h1, img {
+    display: block;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza o texto (aplicável ao h1) */
+}
+
+/* Adiciona um espaçamento entre o título e a imagem */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Adiciona um espaçamento entre a imagem e os botões */
+img {
+    margin-bottom: 20px;
+}
+
+/* Centralizar os botões em linha reta */
+.button-container {
+    display: flex; /* Define o layout flexível */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 10px; /* Adiciona espaçamento entre os botões */
+    margin-top: 20px; /* Adiciona espaçamento acima dos botões */
+}
+
+button {
+    padding: 10px 15px; /* Ajusta o tamanho dos botões */
+    font-size: 14px; /* Ajusta o tamanho do texto */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de clique */
+}
+/* Estilo para o título */
+h1 {
+    color: #ff6347; /* Define a cor do título (exemplo: vermelho-tomate) */
+    text-align: center; /* Centraliza o título */
+    font-size: 24px; /* Ajusta o tamanho da fonte */
+}
+/* Estilo para o texto das moedas adicionadas */
+#moedas {
+    font-family: Arial, sans-serif; /* Define a fonte */
+    font-size: 16px; /* Ajusta o tamanho do texto */
+    color: #4CAF50; /* Define uma cor verde para o texto */
+    background-color: #f9f9f9; /* Adiciona um fundo claro */
+    border: 2px solid #4CAF50; /* Adiciona uma borda verde */
+    border-radius: 10px; /* Arredonda os cantos */
+    padding: 10px; /* Adiciona espaçamento interno */
+    margin-top: 20px; /* Adiciona espaçamento acima */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+    text-align: left; /* Alinha o texto à esquerda */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+
+/* Contêiner do cofre */
+.cofre-container {
+    position: relative;
+    width: 300px; /* Largura do cofre */
+    height: 300px; /* Altura do cofre */
+    margin: 20px auto; /* Centraliza o cofre */
+    border: 2px solid #ccc; /* Borda do contêiner */
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que a barra não ultrapasse o contêiner */
+    background-color: #f4f4f4; /* Fundo claro */
+}
+
+/* Barra de progresso dentro do cofre */
+.cofre-barra {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%; /* Começa vazio */
+    background-color: #4CAF50; /* Cor verde para o enchimento */
+    transition: height 0.3s ease; /* Animação suave ao encher */
+}
+
+/* Imagem do cofre */
+.cofre-imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ajusta a imagem ao contêiner sem distorção */
+    z-index: 1; /* Garante que a imagem fique acima da barra */
+    pointer-events: none; /* Impede que a imagem interfira nos cliques */
+}
