@@ -61,13 +61,14 @@ function AtualizarMoedas() {
 // Função para atualizar a barra de progresso
 function AtualizarBarra() {
     const barra = document.getElementById("cofreBarra");
-    const altura = Math.min((total / maxTotal) * 100, 100); // Calcula a altura em porcentagem
-    barra.style.height = `${altura}%`; // Atualiza a altura da barra
+    const altura = Math.min((total / maxTotal) * 100, 100); // porcentagem até no máximo 100%
+    barra.style.height = `${altura}%`;
+    const maxTotal = 100;
 }
 
 // Função para mudar o fundo para ciano
 function MudarFundo() {
-    document.body.style.backgroundColor = "#90EE90"; // Define o fundo como ciano
+    document.body.style.backgroundColor = "#ffffff"; // Define o fundo como ciano
 }
 function Sacar() {
     const valorSaque = parseFloat(prompt("Digite o valor que deseja sacar:"));
@@ -85,3 +86,19 @@ function Sacar() {
         alert(`Você sacou R$ ${valorSaque.toFixed(2)}. Saldo restante: R$ ${total.toFixed(2)}`);
     }
 }
+function FundoPreto() {
+    document.body.style.backgroundColor = "#000000"; // Define o fundo como ciano
+}
+function Adicionar(valor) {
+    total += valor;
+    moedas[valor]++;
+    SalvarNoLocalStorage();
+    AtualizarTotal();
+    AtualizarMoedas();
+    AtualizarBarra();
+    AnimarMoeda(); // Chama a animação da moeda
+
+    
+}
+
+

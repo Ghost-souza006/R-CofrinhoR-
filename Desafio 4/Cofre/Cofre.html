@@ -5,7 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Cofre.css">
     <title>Cofre</title>
+
+     <style>
+      body {
+        text-align: center;
+        font-family: sans-serif;
+        background-color: #f4f4f4;
+        margin-top: 50px;
+      }
+      .cofre-container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+      }
+      .cofre-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2; /* Fica acima da barra */
+        pointer-events: none;
+      }
+      .progresso {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+      }
+      .barra {
+        width: 100%;
+        background: gold;
+        transition: height 0.5s;
+        border-radius: 0 0 10px 10px;
+      }
+    </style>
 </head>
+
 <body>
     <script src="Cofre.js"></script>
     <h1>Cofrinho digital R$</h1>
@@ -14,7 +55,7 @@
         <img src="img/background-piggy-bank-with-coins-banknotes.png" alt="Cofre" class="cofre-imagem">
     </div>
     <div class="button-container">
-        <button onclick="MudarFundo()">Fundo Verde</button>
+        <button onclick="MudarFundo()">Fundo White</button>
         <button onclick="Adicionar(0.10)">Adicionar R$0,10</button>
         <button onclick="Adicionar(0.25)">Adicionar R$0,25</button>
         <button onclick="Adicionar(0.50)">Adicionar R$0,50</button>
@@ -22,8 +63,12 @@
         <button onclick="MostrarTotal()">Mostrar Total R$</button>
         <button onclick="EsvaziarCofre()">Esvaziar Cofre</button>
         <button onclick="Sacar()">Sacar</button>
+        <button onclick="FundoPreto()">Fundo Black</button>
     </div>
     <p id="total"></p>
     <p id="moedas">Moedas adicionadas:</p>
+
+
+    
 </body>
 </html>

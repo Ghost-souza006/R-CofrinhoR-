@@ -102,36 +102,53 @@ h1 {
     width: fit-content; /* Ajusta a largura ao conteúdo */
 }
 
-/* Contêiner do cofre */
 .cofre-container {
     position: relative;
-    width: 300px; /* Largura do cofre */
-    height: 300px; /* Altura do cofre */
-    margin: 20px auto; /* Centraliza o cofre */
-    border: 2px solid #ccc; /* Borda do contêiner */
-    border-radius: 10px; /* Bordas arredondadas */
-    overflow: hidden; /* Garante que a barra não ultrapasse o contêiner */
-    background-color: #f4f4f4; /* Fundo claro */
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    /* border: 2px solid #ccc;  Remova ou comente esta linha */
+    border-radius: 10px;
+    overflow: hidden;
+   
 }
 
-/* Barra de progresso dentro do cofre */
 .cofre-barra {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 0%; /* Começa vazio */
-    background-color: #4CAF50; /* Cor verde para o enchimento */
-    transition: height 0.3s ease; /* Animação suave ao encher */
+    background-color: #4CAF50;
+    transition: height 0.3s ease;
 }
 
-/* Imagem do cofre */
 .cofre-imagem {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ajusta a imagem ao contêiner sem distorção */
-    z-index: 1; /* Garante que a imagem fique acima da barra */
-    pointer-events: none; /* Impede que a imagem interfira nos cliques */
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#moedas {
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+
+@media (max-width: 500px) {
+  .cofre-container {
+    width: 90vw;
+    height: 90vw;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .button-container {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
